@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(e){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>0){
+                        $("#box1").addClass("animate__fadeInLeft");
+                        $("#box2").addClass("animate__fadeInRight");
+                    }
+            });
+        });
+    </script>
+    <style>
+        #box0{
+            background-color: rgb(230, 189, 54); 
+            width:100%; 
+            height:960px;
+            text-align: center;
+            line-height: 700px;
+            font-size: 100px;
+        }
+        #box1, #box2{
+            float:left;
+            text-align: center;
+            line-height: 200px;
+            font-size: 100px;
+        }
+        #box1{
+            background-color: rgb(196, 123, 92);
+            width:50%; height:300px;
+        }
+        #box2{
+            background-color: rgb(62, 147, 62);
+            width:50%; height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box0">Scroll Down 👇</div>
+    <div id="box1" class="animate__animated">👉</div>
+    <div id="box2" class="animate__animated">👈</div>
+</body>
+</html>
